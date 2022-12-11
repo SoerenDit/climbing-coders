@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import { IDoor } from "../models/IDoor";
 
-const Door = (props: { door: IDoor }) => {
+export const Door = (props: { door: IDoor }) => {
     const door = props.door;
     const [active, setActive] = useState(false)
     const [hasBeenOpened, setHasBeenOpened] = useState(false)
@@ -34,13 +34,12 @@ const Door = (props: { door: IDoor }) => {
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
+                aria-describedby="modal-modal-description">
                 <Box id="snow" sx={modalStyle}>
-                    <Typography id="modal-modal-title" variant="h2" color="darkred">
+                    <Typography id="modal-modal-title" variant="h3" color="darkred">
                         {door.title}
                     </Typography>
-                    <Typography id="modal-modal-description" variant="h4" color="darkred">
+                    <Typography id="modal-modal-description" variant="h5" color="black" marginTop={"20px"}>
                         {door.description}
                     </Typography>
                 </Box>
@@ -48,8 +47,6 @@ const Door = (props: { door: IDoor }) => {
         </div>
     );
 };
-
-export default Door;
 
 const buttonStyle = {
     position: "relative",
