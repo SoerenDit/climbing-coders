@@ -29,7 +29,7 @@ const Door = (props: { door: IDoor }) => {
         aria-describedby="modal-modal-description"
       >
         <Box id="snow" sx={modalStyle}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
+          <Typography id="modal-modal-title" variant="h4" align="center">
             {door.title}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
