@@ -2,23 +2,31 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IDoor } from "../models/IDoor";
 
 const Door = (props: { door: IDoor }) => {
   const door = props.door;
+  const [active, setActive] = useState(false)
+  const [hasBeenOpened, setHasBeenOpened] = useState(false)
   const [open, setOpen] = useState(false);
+  const today = Number(String(new Date().getDate()).padStart(2, '0'));
 
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  useEffect(() => {
+    setActive(door.day <= today);
+    setHasBeenOpened(door.day < today);  
+  }, [door.day, today])
 
-  var today = Number(String(new Date().getDate()).padStart(2, '0'));
-
+  const handleOpen = () => {
+    setOpen(true);
+    setHasBeenOpened(true);
+  }
+  const handleClose = () => setOpen(false);  
 
   return (
     <div>
-      <Button onClick={handleOpen} sx={buttonStyle} disabled={door.day > today}>
-        <Typography id="button-text" variant="h1" color="darkred">
+      <Button onClick={handleOpen} sx={buttonStyle} disabled={!active}>
+        <Typography id="button-text" variant="h1" color={hasBeenOpened? "darkred" : "grey"}>
           {door.day}
         </Typography>
       </Button>
@@ -30,7 +38,7 @@ const Door = (props: { door: IDoor }) => {
       >
         <Box id="snow" sx={modalStyle}>
           <Typography id="modal-modal-title" variant="h2" align="center" color="darkred">
-            {door.title} {door.day <= today ? "åben" : "lukket"}
+            {door.title} 
           </Typography>
           <Typography id="modal-modal-description" variant="h4" color="darkred">
             {door.description}
