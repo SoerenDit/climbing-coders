@@ -12,7 +12,7 @@ const Door = (props: { door: IDoor }) => {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <div className="hover:scale-125 hover:rotate-3 hover:z-10 transition duration-150 ease-in-out">
       <Button onClick={handleOpen} sx={buttonStyle}>
         <Typography
           id="button-text"
