@@ -5,8 +5,8 @@ export const Home = () => {
     const doors = Storage.getDoors();
 
     return (
-        <div>
-            {doors.map(d => <Door door={d}></Door>)}
+        <div className="">
+            {doors.map(d => <Door key={d.day} door={d}></Door>)}
         </div>
     );
 }
