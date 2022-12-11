@@ -1,10 +1,12 @@
 import Door from "../components/Door";
+import { Storage } from "../services/storage";
 
 export const Home = () => {
-  return (
-    <>
-      <h1>Home</h1>
-      <Door door={{day: 1, title: "Første låge", description: "Neej hvor fint, nu har du åbnet første låge"}}></Door>
-    </>
-  );
-};
+    const doors = Storage.getDoors();
+
+    return (
+        <div>
+            {doors.map(d => <Door door={d}></Door>)}
+        </div>
+    );
+}
