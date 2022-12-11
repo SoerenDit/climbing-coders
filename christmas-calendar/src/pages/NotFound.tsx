@@ -2,7 +2,7 @@ import React from "react";
 import { HomeButton } from "../components/HomeButton";
 import { BrowserHistory } from "@remix-run/router";
 import { useNavigate } from "react-router";
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 export function NotFound() {
     const navigate = useNavigate();
@@ -10,8 +10,8 @@ export function NotFound() {
 
 
     return (
-        <div>
-            <Button variant="contained" onClick={navigateTo} size="large" color="error" >HO-HO-HOME</Button>
+        <div className="h-screen flex justify-center items-center">
+            <Button className="" variant="contained" onClick={navigateTo} size="large" color="error" >HO-HO-HOME</Button>
         </div>
     );
 }
