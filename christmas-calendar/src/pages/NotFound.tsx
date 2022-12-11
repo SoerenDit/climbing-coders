@@ -1,8 +1,5 @@
-import React from "react";
-import { HomeButton } from "../components/HomeButton";
-import { BrowserHistory } from "@remix-run/router";
 import { useNavigate } from "react-router";
-import { Box, Button } from "@mui/material";
+import { Button } from "@mui/material";
 
 export function NotFound() {
     const navigate = useNavigate();
