@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "christmas-calendar/build",
     "ignore": [
       "firebase.json",
       "**/.*",
