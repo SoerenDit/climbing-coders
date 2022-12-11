@@ -1,9 +1,11 @@
+import { Typography } from "@mui/material";
+
 function App() {
-  return (
-    <div>
-      Hello world
-    </div>
-  );
+    return (
+        <Typography>
+            Hello world
+        </Typography>
+    );
 }
 
 export default App;
