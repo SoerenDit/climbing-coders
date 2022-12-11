@@ -1,8 +1,10 @@
+import {Typography} from '@mui/material';
+
 function App() {
   return (
-    <div>
+    <Typography>
       Hello world
-    </div>
+    </Typography>
   );
 }
 
