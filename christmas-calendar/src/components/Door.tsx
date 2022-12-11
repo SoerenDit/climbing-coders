@@ -26,7 +26,7 @@ const Door = (props: { door: IDoor }) => {
     return (
         <div className="hover:scale-125 hover:rotate-3 hover:z-10 transition duration-150 ease-in-out">
             <Button onClick={handleOpen} sx={buttonStyle} disabled={!active}>
-                <Typography id="button-text" variant="h1" color={hasBeenOpened ? "darkred" : "grey"}>
+                <Typography id="button-text" variant="h1" color={hasBeenOpened ? "black" : "gray"}>
                     {door.day}
                 </Typography>
             </Button>
@@ -55,8 +55,8 @@ const buttonStyle = {
     position: "relative",
     width: "200px",
     height: "200px",
-    background:
-        "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)",
+    backgroundImage:
+        "repeating-linear-gradient(45deg, transparent 0px, transparent 25px,hsla(261,69%,36%,0.35) 25px, hsla(261,69%,36%,0.35) 27px,transparent 27px, transparent 51px),repeating-linear-gradient(135deg, transparent 0px, transparent 25px,hsla(261,69%,36%,0.35) 25px, hsla(261,69%,36%,0.35) 27px,transparent 27px, transparent 51px),repeating-linear-gradient(135deg, transparent 0px, transparent 50px,hsla(331,83%,53%,0.4) 50px, hsla(331,83%,53%,0.4) 52px,transparent 52px, transparent 102px),repeating-linear-gradient(45deg, transparent 0px, transparent 50px,hsla(331,83%,53%,0.4) 50px, hsla(331,83%,53%,0.4) 52px,transparent 52px, transparent 102px),repeating-linear-gradient(45deg, hsla(116,60%,21%,0.4) 0px, hsla(116,60%,21%,0.4) 2px,transparent 2px, transparent 102px),repeating-linear-gradient(135deg, hsla(116,60%,21%,0.4) 0px, hsla(116,60%,21%,0.4) 2px,transparent 2px, transparent 102px),linear-gradient(135deg, rgb(207,37,37),rgb(207,37,37));",
 };
 
 const modalStyle = {
