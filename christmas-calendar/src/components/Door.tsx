@@ -40,7 +40,7 @@ const Door = (props: { door: IDoor }) => {
                     <Typography id="modal-modal-title" variant="h3" color="darkred">
                         {door.title}
                     </Typography>
-                    <Typography id="modal-modal-description" variant="h5" color="darkred">
+                    <Typography id="modal-modal-description" variant="h5" color="black" marginTop={"20px"}>
                         {door.description}
                     </Typography>
                 </Box>
