@@ -1,4 +1,4 @@
-import Door from "../components/Door";
+import { Door } from "../components/Door";
 import { Storage } from "../services/storage";
 
 export const Home = () => {
@@ -14,5 +14,3 @@ export const Home = () => {
         </div>
     );
 }
-
-
