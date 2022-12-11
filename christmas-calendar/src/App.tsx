@@ -1,8 +1,10 @@
+import {Typography} from '@mui/material';
+
 function App() {
   return (
-      <h1 className="text-3xl font-bold underline">
-          Hello world!
-      </h1>
+    <Typography variant='h1' sx={{backgroundColor:'red'}}>
+      Hello world
+    </Typography>
   );
 }
 
