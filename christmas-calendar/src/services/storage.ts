@@ -1,8 +1,8 @@
-import { Door } from "../models/door";
+import { IDoor } from "../models/IDoor";
 import data from "../data/doors.json";
 
 export class Storage {
-    static getDoors(): Door[] {
+    static getDoors(): IDoor[] {
         return data.doors;
     }
 }
