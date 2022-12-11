@@ -2,7 +2,7 @@ import {Typography} from '@mui/material';
 
 function App() {
   return (
-    <Typography>
+    <Typography variant='h1' sx={{backgroundColor:'red'}}>
       Hello world
     </Typography>
   );
