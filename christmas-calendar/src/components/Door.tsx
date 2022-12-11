@@ -37,7 +37,7 @@ const Door = (props: { door: IDoor }) => {
                 aria-describedby="modal-modal-description"
             >
                 <Box id="snow" sx={modalStyle}>
-                    <Typography id="modal-modal-title" variant="h2" align="center" color="darkred">
+                    <Typography id="modal-modal-title" variant="h2" color="darkred">
                         {door.title}
                     </Typography>
                     <Typography id="modal-modal-description" variant="h4" color="darkred">
@@ -67,8 +67,11 @@ const modalStyle = {
     transform: "translate(-50%, -50%)",
     width: "90vh",
     height: "90vh",
-    background:
-        "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    backgroundImage:
+        "repeating-linear-gradient(249deg, transparent 0px, transparent 3px,rgb(255,255,255) 3px, rgb(255,255,255) 32px),repeating-linear-gradient(307deg, transparent 0px, transparent 3px,rgb(255,255,255) 3px, rgb(255,255,255) 32px),linear-gradient(90deg, hsl(191,85%,78%),hsl(242.429,85%,78%),hsl(293.857,85%,78%),hsl(345.286,85%,78%),hsl(36.714,85%,78%),hsl(88.143,85%,78%),hsl(139.571,85%,78%));",
     // bgcolor: "background.paper",
     border: "2px solid #000",
     boxShadow: 24,
